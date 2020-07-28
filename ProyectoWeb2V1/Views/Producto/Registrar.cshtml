@@ -8,13 +8,64 @@
 
 <!-- Button -->
 <div class="card-body">
-    <a href="#" class="btn btn-success btn-icon-split">
-        <span class="icon text-white-50">
-            <i class="fas fa-check"></i>
-        </span>
-        <span class="text">Nuevo Producto</span>
-    </a>
+    <button onclick="abrirModal(0)" class="btn btn-success" type="button" data-toggle="modal" data-target="#exampleModalXl">
+        <i class="fas fa-newspaper"></i> Nuevo producto
+    </button>
 </div>
+
+<!-- Modal Register -->
+<div class="modal fade" id="exampleModalXl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Extra Large Modal</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="card">
+                            <div class="card-header">Imagen Producto</div>
+                            <div class="card-body text-center">
+                                <img class="img-account-profile rounded-circle mb-2" id="imgFoto" width="300" height="300" src="" alt="">
+                                <div class="small font-italic text-muted mb-4">Recomendación 300 x 300</div>
+                                <input id="btnFoto" type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="card mb-4">
+                            <div class="card-header">Detalles Producto</div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <input class="form-control" id="txtidempresa" type="hidden">
+                                    <input class="form-control" id="txtidproducto" type="hidden">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input class="form-control" id="txtnombre" type="text" placeholder="Nombre del producto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Descripción</label>
+                                    <input class="form-control" id="txtdescripcion" type="text" placeholder="Descripción del producto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Precio</label>
+                                    <input class="form-control" id="txtprecio" type="text" placeholder="Precio">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCancelar" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button onclick="Agregar()" type="button" class="btn btn-success">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -22,7 +73,10 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <div id="tabla">
+
+            </div>
+            <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -61,8 +115,26 @@
                         <td>$112,000</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
     </div>
 </div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/assets/vendor/jquery/jquery.min.js"></script>
+<script src="~/scripts/Producto.js"></script>
+<script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="~/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="~/assets/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="~/assets/vendor/datatables/jquery.dataTables.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="~/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="~/assets/js/demo/datatables-demo.js"></script>
 

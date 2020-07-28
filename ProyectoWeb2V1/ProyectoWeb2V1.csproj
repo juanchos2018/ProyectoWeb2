@@ -1667,6 +1667,7 @@
     <Content Include="assets\vendor\jquery\jquery.slim.js" />
     <Content Include="assets\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="scripts\Producto.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
